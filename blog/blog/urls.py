@@ -34,13 +34,11 @@ urlpatterns = [
 
     #LOGIN
     path('login/',auth.LoginView.as_view(template_name='usuarios/login.html'),name='login'),
-    path('registro/',auth.LoginView.as_view(template_name='usuarios/registro.html'),name='registro'),
-    path('blog/',auth.LoginView.as_view(template_name='post/blog.html'),name='blog'),
     path('logout/',auth.LogoutView.as_view(),name="logout"),
     
 
     # URL DE APLICACION
     path('Noticias/', include('apps.noticias.urls')),
     path('Usuario/',include('apps.usuarios.urls')),
+    path('blog/', include('apps.post.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
