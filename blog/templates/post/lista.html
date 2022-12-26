@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}POSTEOS{% endblock titulo %}
+
+
+{% block contenido %}
+
+	<h1>POSTS</h1>
+	<main class="container">
+		<div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+			<div class="col-md-6 px-6">
+				<div class="centrar">
+					{%for post in posteos%}
+						<img src="{{post.imagen.url}}" width="200" heigth="200" >
+						
+						<p><a href="{% url 'post:detalle' post.pk %}">TITULO: {{post.titulo}}</a></p>
+						
+						<p>FECHA: {{post.fecha}}</p>
+				
+						<br><br>
+						
+					{%endfor%}
+				</div>
+			</div>	
+		</div>
+{% endblock contenido %}
+
