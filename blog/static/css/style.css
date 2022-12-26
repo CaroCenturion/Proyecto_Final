@@ -77,8 +77,8 @@ input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
 body {
   width:100%;
   font-family: 'Lato', sans-serif;
-  background: #ffffff;
-  color: #000000;
+  background: #06cec4;
+  color: #1e09d8;
 }
 
 header {
@@ -165,5 +165,5 @@ textarea:hover {
 }
 
 #submit:hover {
-  color: #e2dedb;
+  color: #dddbe2;
 }
