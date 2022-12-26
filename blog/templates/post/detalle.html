@@ -5,14 +5,17 @@
 
 
 {% block contenido %}
-	<h1>DETALLE DEL POST</h1>
-	<img src="{{posteo.imagen.url}}" width="500" heigth="500" >
-		<p>TITULO: {{posteo.titulo}}</p>
-		<p>FECHA: {{posteo.fecha}}</p>
-		<p>CUERPO: {{posteo.cuerpo}}</p>
-		<br><br>
-		<br>
-		
+<main class="container">
+	<div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+		<div class="col-md-6 px-6">
+			<img src="{{posteo.imagen.url}}" width="500" heigth="500" >
+				<p>TITULO: {{posteo.titulo}}</p>
+				<p>FECHA: {{posteo.fecha}}</p>
+				<p>CUERPO: {{posteo.cuerpo}}</p>
+				<br><br>
+				<br>
+		</div>
+	</div>			
 		<div class="container">
 			<div id="disqus_thread"></div>
 				<script>
